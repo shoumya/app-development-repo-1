@@ -1,1 +1,1 @@
-# application-development-1
+# Application Development Repository for Javascript based projects
