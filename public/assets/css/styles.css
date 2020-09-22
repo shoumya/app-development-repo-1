@@ -1,0 +1,126 @@
+/* TOC Container Style */
+.tocContainer {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Queries for the screen sizes */
+@media only screen and (min-width: 992px) {
+  .tocContainer {
+    width: 992px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .tocContainer {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tocContainer {
+    width: 500px;
+  }
+}
+
+.topicsLink {
+  list-style-type: none;
+  margin-top: 10px;
+  background-color: #fbfbfb;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(68, 87, 144, 0.973);
+  border-left: 5px solid rgb(231, 231, 231);
+}
+
+.topicsLink:hover {
+  background-color: #c4c4c4;
+  color: white;
+  border-bottom: 1px solid rgb(124, 124, 124);
+}
+
+.tocTitle {
+  text-align: center;
+  text-decoration: underline;
+  color: rgba(68, 87, 144, 0.973);
+}
+
+.chapterInfo {
+  background-color: rgb(215, 218, 241);
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.chaptersCompleted {
+  color: black;
+}
+
+.chaptersInProgress {
+  color: red;
+}
+
+.chapterLink {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.chapterLink:hover {
+  background-color: rgb(211, 211, 211);
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.chaptersOpen {
+  animation-duration: 3s;
+  animation-name: chaptersOpeningTransition;
+}
+
+@keyframes chaptersOpeningTransition {
+  from {
+    opacity: 0;
+    height: 10%;
+  }
+
+  to {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
